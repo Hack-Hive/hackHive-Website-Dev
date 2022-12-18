@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth'
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 // import { getAnalytics } from "firebase/analytics";
 // // TODO: Add SDKs for Firebase products that you want to use
 // // https://firebase.google.com/docs/web/setup#available-libraries
@@ -14,11 +16,14 @@ const firebaseConfig = {
   storageBucket: "hackhive-70a47.appspot.com",
   messagingSenderId: "606738401254",
   appId: "1:606738401254:web:a5647d22e009701eb8f827",
-  measurementId: "G-637SXN60FW"
+  measurementId: "G-637SXN60FW",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth=getAuth();
-export {app,auth};
+const auth = getAuth();
+const db = getFirestore(app);
+const storage = getStorage(app);
+export { app, auth, db, storage };
 // const analytics = getAnalytics(app);
+// Initialize Cloud Firestore and get a reference to the service

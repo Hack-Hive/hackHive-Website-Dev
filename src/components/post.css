@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
-body {}
+
 
 .postcontainer {
     display: flex;
@@ -13,6 +13,9 @@ body {}
     background-color: white;
 
     box-shadow: 0 0 15px #2b2b2b75;
+    margin-top: 3rem;
+
+    border: 3px solid rgb(0, 26, 255);
 }
 
 .topbar {
@@ -21,13 +24,18 @@ body {}
     align-items: center;
 }
 
+.lbar {
+    display: flex;
+    flex-direction: row;
+}
+
 .profileimg img {
     height: 3rem;
     width: 3rem;
 }
 
 .profileimg {
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
 }
 
 .usrname {
@@ -53,7 +61,8 @@ body {}
 .midbar>.title {
     font-size: x-large;
     font-weight: bold;
-    text-align: left;
+    display: flex;
+    justify-content: left;
     margin: 1rem 2rem;
 }
 
@@ -61,6 +70,7 @@ body {}
     font-size: medium;
     text-align: left;
     margin: 1rem 2rem;
+    overflow-wrap: break-word;
 }
 
 .reactions {
@@ -85,8 +95,159 @@ body {}
     padding: 1rem;
     font-weight: bolder;
     background: none;
+    cursor: pointer;
 }
 
 .ritem:hover {
     background-color: rgb(240, 240, 240);
+}
+
+.hackacontainer {
+    height: 50rem;
+    width: 40rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem 3rem;
+    width: 50%;
+    height: 30rem;
+    /* background-color: rgb(8, 25, 120); */
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hackatitle {
+    color: white;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.hackathoncontainer {
+    background: linear-gradient(45deg, rgb(13, 0, 128), rgb(0, 3, 182));
+    border-radius: 1rem;
+    width: 25rem;
+    margin: 1rem 0;
+    margin-right: 5rem;
+    padding: 2rem;
+    /* box-shadow: 0 0 25px rgb(0, 5, 48); */
+    border: 3px solid rgb(0, 26, 255);
+}
+
+.hackathonboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 3rem;
+}
+
+.topbarhc {
+    font-size: x-large;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.medbarhc {
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.bottombarhc {
+    font-size: larger;
+    font-weight: 600;
+    color: white;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hackbtn {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #fff 20%, rgb(255, 247, 134) 40%, #ECD08C 50%, #ECD08C 55%, #fff 70%, #fff 100%);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.btn {
+    cursor: pointer;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.btnplacement {
+    display: flex;
+    justify-content: end;
+}
+
+.chatroomcontainer {
+    height: 20rem;
+    width: 40rem;
+    position: fixed;
+    bottom: 10rem;
+    right: 0;
+    margin: 2rem 3rem;
+    width: 50%;
+    /* background-color: rgb(8, 25, 120); */
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: white;
+}
+
+.titlechat {
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.chatroominfocard {
+    background-color: rgb(13, 0, 128);
+    border: 3px solid rgba(0, 26, 255, 0.603);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.chatroominfocard img {
+    height: 1.5rem;
+    filter: invert();
+    margin-right: 0.5rem;
+}
+
+.chatroomname {
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+.chatroommemberinfo {
+    margin-left: 1rem;
+}
+
+.chatroomdetails {
+    margin-left: 3rem;
+    font-weight: bold;
+}
+
+.dhha {
+    display: flex;
+    flex-direction: row;
 }

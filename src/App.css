@@ -1,4 +1,140 @@
-body{
+body {
   padding: 0;
   margin: 0;
+  /* background-color: rgb(0, 17, 71); */
+  font-family: 'Nunito' !important;
+  background: linear-gradient(-45deg, #5276ee, #18237e, #2243fd, #3e23d5);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sidebarcontainer {
+  position: fixed;
+  top: 0;
+}
+
+.ttle {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 35rem;
+  margin: 2rem 5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.tbar {
+  font-family: 'Nunito';
+  font-weight: bolder;
+  font-size: large;
+  margin: 0rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.profilepic {
+  height: 2rem;
+}
+
+.feed {
+  margin: auto;
+}
+
+ssbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.inputpost input {
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.inputpost {
+  width: 100%;
+
+  margin-right: 3rem;
+}
+
+.ipcont {
+  height: 22rem;
+}
+
+.ipcont>.tt {
+  font-family: 'Nunito';
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 1rem;
+}
+
+.ipcont textarea,
+input {
+  margin: 0.5rem 1rem !important;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.ipcont input {
+  font-size: large;
+  font-weight: bold;
+}
+
+.ipcont input[type="file"] {
+  height: 10rem;
+}
+
+.ipcont textarea {
+
+  height: 100%;
+}
+
+.btn {
+  padding: 1rem;
+  width: 20%;
+  border-radius: 2rem;
+  float: right;
+  border: none;
+  background-color: rgb(0, 25, 150) !important;
+  color: white !important;
+  font-weight: bolder;
+}
+
+.submitbtn {
+  margin: 1rem;
+}
+
+.buttonwrapper {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.tt {
+  display: flex;
+  flex-direction: column;
+}
+
+.formpost {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./post.css";
 
-export default function Post() {
+export default function Post(props) {
+  const [liked, setliked] = useState(false);
+  const handlesubmit = () => {
+    if (liked == true) {
+      setliked(false);
+    } else {
+      setliked(true);
+    }
+  };
+  const username = props.username;
+  const profileimgurl = props.profileimgurl;
+  console.log(profileimgurl);
+  const postimgurl = props.postimgurl;
+  const caption = props.caption;
+  const title = props.title;
   return (
     <div>
       <div className="postcontainer">
         <div className="topbar">
           <div className="profileimg">
-            <img src="profilepic.png" alt="" />
+            <img src={profileimgurl} alt="" />
           </div>
-          <div className="usrname">Abstract Jason</div>
+          <div className="usrname">{username}</div>
         </div>
         <div className="midbar">
           <div className="photopost">
             <img src="post.jpg" alt="" />
           </div>
-          <div className="title">Great Experience at Hackathon</div>
-          <div className="caption">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            qui deserunt provident quibusdam dolores officiis sunt, amet
-            molestias saepe modi. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Quis, modi fugiat inventore reprehenderit tempore
-            eligendi. Deserunt illo atque tenetur quo.
-          </div>
+          <div className="title">{title}</div>
+          <div className="caption">{caption}</div>
         </div>
         <div className="endbar">
           <div className="reactions">
-            <button className="ritem">
-              <img src="likeiconhol.png" alt="" />
+            <button className="ritem" onClick={handlesubmit}>
+              <img src={!liked ? "likeiconhol.png" : "likeicon.png"} alt="" />
               Like
             </button>
             <button className="ritem">
